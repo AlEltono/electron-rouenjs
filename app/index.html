@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Markdown Editor - RouenJS</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./vendors/photon/css/photon.min.css">
+    <link rel="stylesheet" href="./vendors/simplemde/simplemde.min.css">
+
+    <!-- Javascript -->
+    <!-- Live Reload on Dev -->
+    <script>
+      if (process.env.ELECTRON_ENV && process.env.ELECTRON_ENV.trim() === 'dev') {
+        require('electron-connect').client.create()
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Wrapper -->
+    <div class="window">
+      <!-- Header of the APP -->
+      <header class="toolbar toolbar-header" style="-webkit-app-region: drag">
+        <h1 class="title">Markdown Editor</h1>
+        <div class="toolbar-actions">
+          <div class="btn-group">
+            <button class="btn btn-default" id="load-markdown">
+              <span class="icon icon-folder"></span>
+            </button>
+            <button class="btn btn-default" id="btn-github">
+              <span class="icon icon-github"></span>
+            </button>
+          </div>
+          <button class="btn btn-default pull-right btn-negative" id="btn-close">
+            <span class="icon icon-cancel-squared" style="color:#fff"></span>
+          </button>
+      </header>
+
+      <!-- Main application -->
+      <div class="window-content">
+        <div class="pane-group">
+          <div class="pane pam">
+            <h1 class="text-center">Editor</h1>
+            <textarea id="markdown-editor"></textarea>
+          </div>
+          <div class="pane pam">
+            <h1 class="text-center">Preview</h1>
+            <div id="preview"><em>Preview will be displayed here</em></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="toolbar toolbar-footer">
+        <div class="toolbar-actions text-center">
+          <span class="title">@alantondelier - RouenJS#1</span>
+          <button class="btn btn-primary pull-right" id="save-markdown">
+            Save
+          </button>
+        </div>
+      </footer>
+
+    </div>
+    <script src="./assets/js/main.js" charset="utf-8"></script>
+  </body>
+</html>

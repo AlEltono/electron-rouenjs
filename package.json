@@ -1,0 +1,38 @@
+{
+  "name": "electron_markdown_editor",
+  "version": "1.0.0",
+  "description": "A proof of concept electron app for RouenJS #1",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "set ELECTRON_ENV=dev && gulp",
+    "build": "build -w --x64 --ia32"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlEltono/electron-rouenjs.git"
+  },
+  "keywords": [
+    "electron",
+    "rouenJS"
+  ],
+  "author": "Alan Tondelier @alantondelier",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/AlEltono/electron-rouenjs/issues"
+  },
+  "homepage": "https://github.com/AlEltono/electron-rouenjs#readme",
+  "devDependencies": {
+    "electron": "^1.6.2",
+    "electron-builder": "^15.6.2",
+    "electron-connect": "^0.6.1",
+    "eslint": "^3.18.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "simplemde": "^1.11.2"
+  },
+  "build": {
+    "appId": "rouenjs.markdowneditor"
+  }
+}
