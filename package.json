@@ -29,10 +29,12 @@
     "eslint": "^3.18.0",
     "eslint-config-standard": "^7.1.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^2.1.1",
-    "simplemde": "^1.11.2"
+    "eslint-plugin-standard": "^2.1.1"
   },
   "build": {
     "appId": "rouenjs.markdowneditor"
+  },
+  "dependencies": {
+    "simplemde": "^1.11.2"
   }
 }
