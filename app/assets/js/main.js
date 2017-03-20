@@ -5,7 +5,7 @@
 const SimpleMDE = require('simplemde')
 
 // Use to access remote electron process.
-const {remote, shell} = require('electron')
+const {remote, shell, ipcRenderer} = require('electron')
 
 // Get the dialog component.
 const dialog = remote.dialog
@@ -100,6 +100,5 @@ load.onclick = () => {
 
 // Close window
 closeBtn.onclick = () => {
-  let window = remote.getCurrentWindow()
-  window.close()
+  ipcRenderer.send('close-window')
 }
